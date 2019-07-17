@@ -1,0 +1,108 @@
+<head>
+  <link
+    href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time" />
+<owl-date-time #dt1></owl-date-time>
+
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div class="form-group">
+      <label for="eventName">Event</label>
+      <input
+        required
+        minlength="3"
+        maxlength="10"
+        ngModel
+        name="eventName"
+        #eventName="ngModel"
+        (change)="log(eventName)"
+        id="eventName"
+        type="text"
+        class="form-control"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="eventName.touched && !eventName.valid"
+      >
+        <div *ngIf="eventName.errors.required">Event name is required.</div>
+        <div *ngIf="eventName.errors.minlength">
+          Event name should be minimum
+          {{ eventName.errors.minlength.requiredLength }} characters.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div class="form-group">
+      <label for="eventTime">Event Time</label>
+      <input
+        required
+        minlength="1"
+        maxlength="10"
+        ngModel
+        name="eventTime"
+        #eventTime="ngModel"
+        (change)="log(eventTime)"
+        id="eventTime"
+        type="text"
+        class="form-control"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="eventTime.touched && !eventTime.valid"
+      >
+        <div *ngIf="eventTime.errors.required">Event time is required.</div>
+        <div *ngIf="eventTime.errors.minlength">
+          Event time should be minimum
+          {{ eventName.errors.minlength.requiredLength }} hour(s) long.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="comment">Event Details</label>
+    <textarea
+      ngModel
+      name="comment"
+      id="comment"
+      cols="30"
+      rows="10"
+      class="form-control"
+    ></textarea>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ngModel name="isSubscribed" /> Handicapped friendly
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="contactMethod">Contact Method</label>
+    <select
+      multiple
+      ngModel
+      name="contactMethod"
+      id="contactMethod"
+      class="form-control"
+    >
+      <option value=""></option>
+      <option *ngFor="let method of contactMethods" [value]="method.id">{{
+        method.name
+      }}</option>
+    </select>
+  </div>
+  <div *ngFor="let method of contactMethods" class="radio">
+    <label>
+      <input ngModel type="radio" name="contactMethod" [value]="method.id" />
+      {{ method.name }}
+    </label>
+  </div>
+
+  <p>{{ f.value | json }}</p>
+  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+</form>
