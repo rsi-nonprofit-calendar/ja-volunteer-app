@@ -5,13 +5,12 @@
   />
 </head>
 
-<input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time" />
-<owl-date-time #dt1></owl-date-time>
+<h1>Create an Event</h1>
 
 <form #f="ngForm" (ngSubmit)="submit(f)">
   <div ngModelGroup="contact" #contact="ngModelGroup">
     <div class="form-group">
-      <label for="eventName">Event</label>
+      <label for="eventName">Event Name</label>
       <input
         required
         minlength="3"
@@ -37,33 +36,23 @@
     </div>
   </div>
 
-  <div ngModelGroup="contact" #contact="ngModelGroup">
-    <div class="form-group">
-      <label for="eventTime">Event Time</label>
-      <input
-        required
-        minlength="1"
-        maxlength="10"
-        ngModel
-        name="eventTime"
-        #eventTime="ngModel"
-        (change)="log(eventTime)"
-        id="eventTime"
-        type="text"
-        class="form-control"
-      />
-      <div
-        class="alert alert-danger"
-        *ngIf="eventTime.touched && !eventTime.valid"
-      >
-        <div *ngIf="eventTime.errors.required">Event time is required.</div>
-        <div *ngIf="eventTime.errors.minlength">
-          Event time should be minimum
-          {{ eventName.errors.minlength.requiredLength }} hour(s) long.
-        </div>
-      </div>
+  <label>
+    Event Time:
+    <input
+      [owlDateTime]="dt1"
+      [owlDateTimeTrigger]="dt1"
+      [selectMode]="'range'"
+      placeholder=" click here to enter time"
+    />
+    <owl-date-time #dt1></owl-date-time>
+  </label>
+  <!-- <div class="alert alert-danger" *ngIf="eventTime.touched && !eventTime.valid">
+    <div *ngIf="eventTime.errors.required">Event time is required.</div>
+    <div *ngIf="eventTime.errors.minlength">
+      Event time should be minimum
+      {{ eventName.errors.minlength.requiredLength }} hour(s) long.
     </div>
-  </div>
+  </div> -->
 
   <div class="form-group">
     <label for="comment">Event Details</label>
@@ -105,4 +94,5 @@
 
   <p>{{ f.value | json }}</p>
   <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+  console.log(f.value);
 </form>
