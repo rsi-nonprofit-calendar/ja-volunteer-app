@@ -1,0 +1,121 @@
+<header>
+  <div class="container-fluid">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
+      <a class="justify-content-left logo-wrapper" href="" id="logo"
+        ><span class="volunteer-calendar-logo">
+          <img
+            class="m-auto"
+            src="../assets/img/logo.png"
+            alt="The Volunteer Calendar"
+          />
+          The Volunteer Calendar</span
+        ></a
+      >
+
+      <button
+        class="navbar-toggler btn-light mt-1"
+        type="button"
+        data-toggle="collapse"
+        (click)="isNavbarCollapsed = !isNavbarCollapsed"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        [ngbCollapse]="!isNavbarCollapsed"
+        class="collapse navbar-collapse"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown" ngbDropdown>
+            <a
+              class="nav-link dropdown-toggle text-light"
+              ngbDropdownToggle
+              id="navbarDropdownAccount"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Account</a
+            >
+            <div
+              class="dropdown-menu"
+              ngbDropdownMenu
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" ngbDropdownItem href="./sign-up"
+                >Sign Up</a
+              >
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                data-toggle="modal"
+                (click)="openSignInModal()"
+                >Sign In</a
+              >
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                href=""
+                routerLink=""
+                (click)="signOut()"
+                >Sign Out</a
+              >
+            </div>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a
+              class="nav-link dropdown-toggle text-light"
+              ngbDropdownToggle
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Profile</a
+            >
+            <div
+              class="dropdown-menu"
+              ngbDropdownMenu
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" ngbDropdownItem href="./profile-view"
+                >Profile Page</a
+              >
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                data-toggle="modal"
+                (click)="openUpdateProfileModal()"
+                >Update Profile</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              data-toggle="modal"
+              (click)="openAddImageModal()"
+              >Categories</a
+            >
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
