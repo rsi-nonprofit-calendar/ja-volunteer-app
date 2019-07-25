@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from "ng-pick-datetime";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -17,7 +18,8 @@ import { FormsModule } from "@angular/forms";
     FormsModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
