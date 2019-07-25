@@ -10,11 +10,7 @@ export class CreateEventComponent {
   posts: any[];
   private url = "http://jsonplaceholder.typicode.com/posts";
 
-  constructor(private http: HttpClient) {
-    // http.get(this.url).subscribe(response => {
-    //   this.posts = response.json();
-    // });
-  }
+  constructor(private http: HttpClient) {}
 
   createEvent(input: HTMLInputElement) {
     let post = { event: input.value };
@@ -24,16 +20,4 @@ export class CreateEventComponent {
       console.log("Success!", response);
     });
   }
-
-  // contactMethods = [
-  //   { id: 1, name: "Event location: " },
-  //   { id: 2, name: "Event Time:" }
-  // ];
-  // log(x) {
-  //   console.log(x);
-  // }
-
-  // submit(f) {
-  //   console.log(f);
-  // }
 }
