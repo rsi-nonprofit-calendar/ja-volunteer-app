@@ -9,6 +9,5 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 })
 export class SplashComponent implements OnInit {
   constructor(private router: Router, private modalService: NgbModal) {}
-
   ngOnInit(): void {}
 }

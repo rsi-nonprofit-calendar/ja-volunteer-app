@@ -16,6 +16,28 @@ a {
   text-decoration: none;
 }
 
+.jumbotron {
+  text-align: center;
+}
+
+.jumbotron img {
+  width: auto;
+  height: 200px;
+}
+
+.navbar img {
+  height: 50px;
+}
+
+.carousel-caption h3 {
+  font-weight: bold;
+}
+
+.carousel-caption {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
