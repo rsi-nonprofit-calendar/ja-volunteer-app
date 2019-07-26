@@ -1,66 +1,70 @@
 <div class="container-fluid mt-5 pt-5">
   <!--JUMBOTRON:-->
-
   <div class="jumbotron p-5 container-fluid">
-    <div class="row">
-      <div class="col-lg-8">
-        <ngb-carousel>
-          <div class="row justify-content-md-center">
-            <ng-template ngbSlide>
-              <img
-                src="../assets/watermelonMountainRanch.jpg"
-                alt="Welcome To The Volunteer Calendar"
-                class="rounded mx-auto"
-              />
-              <div class="carousel-caption text-dark">
-                <h3>Welcome to the Volunteer Calendar!</h3>
-                <p>
-                  Please explore and find organizations or upcoming events to
-                  join.
-                </p>
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <img
-                src="../assets/watermelonMountainRanch.jpg"
-                alt="Watermelon Mountain Ranch"
-                class="rounded mx-auto"
-              />
-              <div class="carousel-caption text-dark">
-                <h3>Watermelon Mountain Ranch</h3>
-                <p>
-                  A local animal welfare organization focused on finding homes
-                  for all animals.
-                </p>
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <img
-                src="../assets/habitatForHumanity.jpg"
-                alt="Habitat For Humanity"
-                class="rounded mx-auto"
-              />
-              <div class="carousel-caption text-dark">
-                <h3>Habit For Humanity of New Mexico</h3>
-                <p>
-                  Everyone deserves a home in New Mexico!
-                </p>
-              </div>
-            </ng-template>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="row">
+          <div class="col-9">
+            <img
+              src="assets/logo.png"
+              alt="Welcome To The Volunteer Calendar"
+              class="rounded mx-auto"
+            />
           </div>
-        </ngb-carousel>
-      </div>
-
-      <div class="col-lg-3">
-        <div class="card">
-          <h3>Event Information</h3>
-          <p>
-            This section will display event information tied to display ad such
-            as date, time, location, and other details.
-          </p>
+          <div class="col-3">
+            <div class="card">
+              <h3>Welcome to the Volunteer Calendar!</h3>
+              <p>
+                Please explore and find organizations or upcoming events to
+                join.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="row">
+          <div class="col-9">
+            <img
+              src="assets/watermelonMountainRanch.jpg"
+              alt="Watermelon Mountain Ranch"
+              class="rounded mx-auto"
+            />
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <h3>Watermelon Mountain Ranch</h3>
+              <p>
+                New Mexico's largest no-kill animal shelter, Watermelon Mountain
+                Ranch is a pet rescue and advocacy organization savings
+                thousands of dogs and cats each year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="row">
+          <div class="col-9">
+            <img
+              src="assets/habitatForHumanity.jpg"
+              alt="Welcome To The Volunteer Calendar"
+              class="rounded mx-auto"
+            />
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <h3>Habitat For Humanity</h3>
+              <p>
+                Habitat for Humanity of New Mexico is dedicated to eliminating
+                substandard housing locally and worldwide through constructing,
+                rehabilitating and preserving homes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
   </div>
 
   <!--VOLUNTEER BY LINKS:-->
