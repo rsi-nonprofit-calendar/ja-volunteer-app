@@ -1,16 +1,12 @@
 <header>
   <div class="container-fluid">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
-      <a class="justify-content-left logo-wrapper" href="" id="logo"
-        ><span class="volunteer-calendar-logo text-light">
-          <img
-            class="m-auto"
-            src="../assets/logo.png"
-            alt="The Volunteer Calendar"
-          />
-          The Volunteer Calendar</span
-        ></a
-      >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-info">
+      <a class="justify-content-left logo-wrapper text-light" href="" id="logo"
+        ><span class="volunteer-calendar-logo">
+          <div class="fa-2x fas fa-hand-holding-heart"></div>
+          The Volunteer Calendar
+        </span>
+      </a>
 
       <button
         class="navbar-toggler btn-light mt-1"
@@ -32,72 +28,67 @@
       >
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link text-light" href="./categories">Categories</a>
+            <a class="nav-link text-light" href="categories">Categories</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-light" href="./calendar">Calendar</a>
+            <a class="nav-link text-light" href="calendar">Calendar</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-light" href="./aboutUs">About Us</a>
+            <a class="nav-link text-light" href="aboutUs">About Us</a>
           </li>
+          <!--Account Dropdown Menu-->
+
+          <li class="nav-item dropdown" ngbDropdown>
+            <a
+              class="nav-link dropdown-toggle text-light"
+              ngbDropdownToggle
+              id="navbarDropdownAccount"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Account</a
+            >
+            <div
+              class="dropdown-menu"
+              ngbDropdownMenu
+              aria-labelledby="navbarDropdown"
+            >
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                href=""
+                routerLink=""
+                (click)="profile()"
+                >Profile</a
+              >
+              <app-sign-up></app-sign-up>
+              <app-sign-in></app-sign-in>
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                href=""
+                routerLink=""
+                (click)="signOut()"
+                >Sign Out</a
+              >
+            </div>
+          </li>
+          <!-- </ul> -->
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-        <li class="nav-item dropdown" ngbDropdown>
-          <a
-            class="nav-link dropdown-toggle text-light"
-            ngbDropdownToggle
-            id="navbarDropdownAccount"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            >Account</a
-          >
-          <div
-            class="dropdown-menu"
-            ngbDropdownMenu
-            aria-labelledby="navbarDropdown"
-          >
-            <a
-              class="dropdown-item"
-              ngbDropdownItem
-              href=""
-              routerLink=""
-              (click)="profile()"
-              >Profile</a
-            >
-            <a class="dropdown-item" ngbDropdownItem href="./sign-up"
-              >Sign Up</a
-            >
-            <!-- <a
-              class="dropdown-item"
-              ngbDropdownItem
-              data-toggle="modal"
-              (click)="app - sign - in()"
-              ></a> -->
-            <app-sign-in></app-sign-in>
-            <a
-              class="dropdown-item"
-              ngbDropdownItem
-              href=""
-              routerLink=""
-              (click)="signOut()"
-              >Sign Out</a
-            >
-          </div>
-        </li>
       </div>
     </nav>
   </div>

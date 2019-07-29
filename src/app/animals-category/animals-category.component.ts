@@ -1,13 +1,12 @@
 import { Component } from "@angular/core";
 
 import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
-
 @Component({
-  selector: "app-sign-up",
-  templateUrl: "./sign-up.component.html",
-  styleUrls: ["./sign-up.component.css"]
+  selector: "app-animals-category",
+  templateUrl: "./animals-category.component.html",
+  styleUrls: ["./animals-category.component.css"]
 })
-export class SignUpModal {
+export class AnimalsCategoryComponent {
   closeResult: string;
 
   constructor(private modalService: NgbModal) {}
