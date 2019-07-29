@@ -1,64 +1,47 @@
 <head>
-  <link
-    href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <h1>Create an Event</h1>
 
-<form #f="ngForm" (ngSubmit)="submit(f)">
-  <div ngModelGroup="contact" #contact="ngModelGroup">
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <div ngModelGroup="Name" #Name="ngModelGroup">
     <div class="form-group">
       <label for="eventName">Event Name</label>
-      <input
-        (keyup.enter)="createEvent(event)"
-        #event
-        required
-        minlength="3"
-        maxlength="10"
-        ngModel
-        name="eventName"
-        #eventName="ngModel"
-        (change)="log(eventName)"
-        id="eventName"
-        type="text"
-        class="form-control"
-      />
-      <div
-        class="alert alert-danger"
-        *ngIf="eventName.touched && !eventName.valid"
-      >
-        <div *ngIf="eventName.errors.required">Event name is required.</div>
-        <div *ngIf="eventName.errors.minlength">
+      <input #event required minlength="3" maxlength="140" ngModel name="name" #name="ngModel" id="name" type="text"
+        class="form-control" />
+      <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+        <div *ngIf="name.errors.required">Event name is required.</div>
+        <div *ngIf="name.errors.minlength">
           Event name should be minimum
-          {{ eventName.errors.minlength.requiredLength }} characters.
+          {{ name.errors.minlength.requiredLength }} characters.
         </div>
       </div>
     </div>
   </div>
-
-  <label>
-    Event Time:
-    <input
-      [owlDateTime]="dt1"
-      [owlDateTimeTrigger]="dt1"
-      [selectMode]="'range'"
-      placeholder=" click here to enter time"
-    />
-    <owl-date-time #dt1></owl-date-time>
-  </label>
-
-  <div class="form-group">
-    <label for="comment">Event Details</label>
-    <textarea
-      ngModel
-      name="comment"
-      id="comment"
-      cols="30"
-      rows="10"
-      class="form-control"
-    ></textarea>
+  <div ngModelGroup="time" #time="ngModelGroup">
+    <div class="form-group">
+      <label for="eventTime">
+        Event Time:
+        <input ngModel name="time" #event required #time="ngModel" id="eventTime" class="form-control"
+          [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder=" click here to enter time" />
+        <owl-date-time #dt1></owl-date-time>
+      </label>
+      <div class="alert alert-danger" *ngIf="time.touched && !time.valid">
+        <div *ngIf="time.errors.required">Event time is required.</div>
+      </div>
+    </div>
+  </div>
+  <div ngModelGroup="details" #details="ngModelGroup">
+    <div class="form-group">
+      <label for="eventDetails">Event Details</label>
+      <textarea ngModel required minlength="10" #details="ngModel" name="details" id="details" cols="30" rows="10"
+        class="form-control"></textarea>
+      <div class="alert alert-danger" *ngIf="details.touched && !details.valid">
+        <div *ngIf="details.errors.required">Event details are required.</div>
+        <div *ngIf="eventName.errors.minlength"></div>
+      </div>
+    </div>
   </div>
   <div class="checkbox">
     <label>
@@ -67,5 +50,11 @@
   </div>
 
   <p>{{ f.value | json }}</p>
-  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+
+  <!-- <ul>
+    <li *ngFor="let post of posts">id: {{ post.id }}</li>
+  </ul> -->
+  <button class="btn btn-primary" [disabled]="!f.valid" type="submit">
+    Submit
+  </button>
 </form>

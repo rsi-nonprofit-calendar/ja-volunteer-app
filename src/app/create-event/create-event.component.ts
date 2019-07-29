@@ -1,23 +1,31 @@
-import { Component, OnInit, Injectable } from "@angular/core";
+import { Component, OnInit, ViewChild, Injectable, ViewChildren } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { NgForOf } from '@angular/common';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: "create-event",
   templateUrl: "./create-event.component.html",
   styleUrls: ["./create-event.component.css"]
 })
-export class CreateEventComponent {
+export class CreateEventComponent implements OnInit {
+  @ViewChild('f', { static: false }) eventForm: NgForm;
   posts: any[];
   private url = "http://jsonplaceholder.typicode.com/posts";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  createEvent(input: HTMLInputElement) {
-    let post = { event: input.value };
-    input.value = "";
-
-    this.http.post(this.url, JSON.stringify(post)).subscribe(response => {
-      console.log("Success!", response);
-    });
+  ngOnInit() {
+    this.posts = [];
   }
+
+  onSubmit(f) {
+    let post = { event: f };
+    this.http.post(this.url, post).subscribe(response => {
+      console.log("Success!", response);
+      this.posts.push(response);
+      this.eventForm.resetForm();
+    });
+  };
 }
+
