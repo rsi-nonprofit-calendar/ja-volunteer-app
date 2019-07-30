@@ -18,20 +18,20 @@ import { ProfileComponent } from "./profile/profile.component";
 import { SplashComponent } from "./splash/splash.component";
 import { CalendarComponent } from "./calendar/calendar.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
-import { AnimalsCategoryComponent } from './animals-category/animals-category.component';
-import { TransportationCategoryComponent } from './transportation-category/transportation-category.component';
-import { EqualityCategoryComponent } from './equality-category/equality-category.component';
-import { EnvironmentCategoryComponent } from './environment-category/environment-category.component';
-import { EducationCategoryComponent } from './education-category/education-category.component';
-import { HousingCategoryComponent } from './housing-category/housing-category.component';
-import { ChildrenCategoryComponent } from './children-category/children-category.component';
-import { HealthcareCategoryComponent } from './healthcare-category/healthcare-category.component';
-import { TechnologyCategoryComponent } from './technology-category/technology-category.component';
+import { AnimalsCategoryComponent } from "./animals-category/animals-category.component";
+import { TransportationCategoryComponent } from "./transportation-category/transportation-category.component";
+import { EqualityCategoryComponent } from "./equality-category/equality-category.component";
+import { EnvironmentCategoryComponent } from "./environment-category/environment-category.component";
+import { EducationCategoryComponent } from "./education-category/education-category.component";
+import { HousingCategoryComponent } from "./housing-category/housing-category.component";
+import { ChildrenCategoryComponent } from "./children-category/children-category.component";
+import { HealthcareCategoryComponent } from "./healthcare-category/healthcare-category.component";
+import { TechnologyCategoryComponent } from "./technology-category/technology-category.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent, 
+    PageComponent,
     CreateEventComponent,
     NavbarComponent,
     CategoriesComponent,
@@ -60,7 +60,7 @@ import { TechnologyCategoryComponent } from './technology-category/technology-ca
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],

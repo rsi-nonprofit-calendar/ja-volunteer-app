@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from "@angular/core";
 
+import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
 @Component({
-  selector: 'app-transportation-category',
-  templateUrl: './transportation-category.component.html',
-  styleUrls: ['./transportation-category.component.css']
+  selector: "app-transportation-category",
+  templateUrl: "./transportation-category.component.html",
+  styleUrls: ["./transportation-category.component.css"]
 })
-export class TransportationCategoryComponent implements OnInit {
+export class TransportationCategoryComponent {
+  closeResult: string;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) {}
 
-  ngOnInit() {
+  open(content) {
+    this.modalService
+      .open(content, { ariaLabelledBy: "modal-basic-title" })
+      .result.then(result => {
+        this.closeResult = `Closed with: ${result}`;
+      });
   }
-
 }
