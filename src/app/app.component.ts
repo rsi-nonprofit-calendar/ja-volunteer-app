@@ -9,5 +9,6 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 })
 export class AppComponent {
   title = "vol-army-app";
+
   constructor(private modalService: NgbModal) {}
 }

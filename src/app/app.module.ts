@@ -2,6 +2,11 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from "ng-pick-datetime";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { PageComponent } from "./page/page.component";
+import { CreateEventComponent } from "./create-event/create-event.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { SignInModal } from "./sign-in/sign-in.component";
 import { SignUpModal } from "./sign-up/sign-up.component";
@@ -26,6 +31,8 @@ import { TechnologyCategoryComponent } from './technology-category/technology-ca
 @NgModule({
   declarations: [
     AppComponent,
+    PageComponent, 
+    CreateEventComponent,
     NavbarComponent,
     CategoriesComponent,
     NonprofitComponent,
@@ -50,6 +57,10 @@ import { TechnologyCategoryComponent } from './technology-category/technology-ca
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+    BrowserAnimationsModule,
+    HttpClientModule
     ReactiveFormsModule
   ],
   providers: [],
