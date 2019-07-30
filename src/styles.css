@@ -1,8 +1,8 @@
-
 @import "~ng-pick-datetime/assets/style/picker.min.css";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
 @import "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 
 body,
 html {
@@ -55,4 +55,3 @@ section {
   margin: 0 auto;
   padding: 2em;
 }
-
