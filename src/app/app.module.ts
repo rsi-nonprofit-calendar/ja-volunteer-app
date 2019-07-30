@@ -31,6 +31,7 @@ import { HousingCategoryComponent } from "./housing-category/housing-category.co
 import { ChildrenCategoryComponent } from "./children-category/children-category.component";
 import { HealthcareCategoryComponent } from "./healthcare-category/healthcare-category.component";
 import { TechnologyCategoryComponent } from "./technology-category/technology-category.component";
+import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/watermelon-mountain-ranch.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { TechnologyCategoryComponent } from "./technology-category/technology-ca
     HousingCategoryComponent,
     ChildrenCategoryComponent,
     HealthcareCategoryComponent,
-    TechnologyCategoryComponent
+    TechnologyCategoryComponent,
+    WatermelonMountainRanchComponent
   ],
   imports: [
     NgbModule,
