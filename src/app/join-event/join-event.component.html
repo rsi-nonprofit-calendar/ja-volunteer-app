@@ -1,0 +1,17 @@
+<!-- Get event from DB by id, *connected to create event form: Want to create the event page on submit, or need permission?  
+    For now, just allow creation of event from authorized accounts.  
+    - Event page instantly (automatically) created on submit- how?  Inject a page, 
+         or inject component onto page which includes 'join event' button <- prob. easier.  
+    - Join event button will add user's id to 'volunteers' column in specific event database.
+        -- How to link user id to join button?  
+         var userID = http.get(backend url, api/user/profile.json);
+         return userID;  
+-->
+
+<div>
+    <!-- <button (click)="clickJoin()">Click to Volunteer for Event</button> -->
+    <div>
+        console.log({{ f }});
+    </div>
+    <!-- <p>{{ f.value | json }}</p> -->
+</div>

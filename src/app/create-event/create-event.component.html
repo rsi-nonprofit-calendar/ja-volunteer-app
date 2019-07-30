@@ -1,7 +1,3 @@
-<head>
-  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-
 <h1>Create an Event</h1>
 
 <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
@@ -22,7 +18,7 @@
   <div ngModelGroup="time" #time="ngModelGroup">
     <div class="form-group">
       <label for="eventTime">
-        Event Time:
+        Event Time
         <input ngModel name="time" #event required #time="ngModel" id="eventTime" class="form-control"
           [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder=" click here to enter time" />
         <owl-date-time #dt1></owl-date-time>
@@ -39,7 +35,10 @@
         class="form-control"></textarea>
       <div class="alert alert-danger" *ngIf="details.touched && !details.valid">
         <div *ngIf="details.errors.required">Event details are required.</div>
-        <div *ngIf="eventName.errors.minlength"></div>
+        <div *ngIf="details.errors.minlength">
+          Event details should be minimum
+          {{ details.errors.minlength.requiredLength }} characters.
+        </div>
       </div>
     </div>
   </div>
@@ -49,11 +48,9 @@
     </label>
   </div>
 
-  <p>{{ f.value | json }}</p>
 
-  <!-- <ul>
-    <li *ngFor="let post of posts">id: {{ post.id }}</li>
-  </ul> -->
+
+
   <button class="btn btn-primary" [disabled]="!f.valid" type="submit">
     Submit
   </button>

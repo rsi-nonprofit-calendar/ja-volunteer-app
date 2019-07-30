@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, Injectable, ViewChildren } from "@angular
 import { HttpClient } from "@angular/common/http";
 import { NgForOf } from '@angular/common';
 import { NgForm } from '@angular/forms';
+import { Router } from "@angular/router";
 
 @Component({
   selector: "create-event",

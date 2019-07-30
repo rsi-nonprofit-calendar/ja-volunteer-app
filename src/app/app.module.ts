@@ -27,6 +27,7 @@ import { HousingCategoryComponent } from "./housing-category/housing-category.co
 import { ChildrenCategoryComponent } from "./children-category/children-category.component";
 import { HealthcareCategoryComponent } from "./healthcare-category/healthcare-category.component";
 import { TechnologyCategoryComponent } from "./technology-category/technology-category.component";
+import { JoinEventComponent } from './join-event/join-event.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { TechnologyCategoryComponent } from "./technology-category/technology-ca
     HousingCategoryComponent,
     ChildrenCategoryComponent,
     HealthcareCategoryComponent,
-    TechnologyCategoryComponent
+    TechnologyCategoryComponent,
+    JoinEventComponent
   ],
   imports: [
     NgbModule,
