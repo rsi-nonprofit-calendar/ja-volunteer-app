@@ -1,0 +1,11 @@
+.card {
+  border: none;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  padding: 0;
+  margin: 1px;
+}
+
+#category-icons {
+  color: #de795b;
+}

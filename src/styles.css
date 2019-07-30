@@ -1,2 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+
 @import "~ng-pick-datetime/assets/style/picker.min.css";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
+@import "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
+
+body,
+html {
+  height: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.jumbotron {
+  text-align: center;
+  height: 300px;
+}
+
+.jumbotron img {
+  width: auto;
+  height: 200px;
+}
+
+.carousel-caption h3 {
+  font-weight: bold;
+}
+
+.carousel-caption {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.3em;
+  display: grid;
+  grid-template-columns: 30% auto;
+
+  a {
+    color: white;
+  }
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
