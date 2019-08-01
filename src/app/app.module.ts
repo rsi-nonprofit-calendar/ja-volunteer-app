@@ -1,3 +1,4 @@
+import { JoinEventService } from './join-event/join-event.service';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -31,7 +32,9 @@ import { HousingCategoryComponent } from "./housing-category/housing-category.co
 import { ChildrenCategoryComponent } from "./children-category/children-category.component";
 import { HealthcareCategoryComponent } from "./healthcare-category/healthcare-category.component";
 import { TechnologyCategoryComponent } from "./technology-category/technology-category.component";
+import { JoinEventComponent } from './join-event/join-event.component';
 import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/watermelon-mountain-ranch.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +59,7 @@ import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/wa
     ChildrenCategoryComponent,
     HealthcareCategoryComponent,
     TechnologyCategoryComponent,
+    JoinEventComponent
     WatermelonMountainRanchComponent
   ],
   imports: [
@@ -76,7 +80,7 @@ import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/wa
       useFactory: adapterFactory
     })
   ],
-  providers: [],
+  providers: [JoinEventService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

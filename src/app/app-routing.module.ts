@@ -1,3 +1,5 @@
+import { CreateEventComponent } from './create-event/create-event.component';
+import { JoinEventComponent } from './join-event/join-event.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { SplashComponent } from "./splash/splash.component";
@@ -13,6 +15,7 @@ const routes: Routes = [
   { path: "", component: SplashComponent },
   { path: "categories", component: CategoriesComponent },
   { path: "calendar", component: CalendarComponent },
+  { path: "join-event", component: JoinEventComponent }
   { path: "profile", component: ProfileComponent },
   { path: "aboutUs", component: AboutUsComponent },
   { path: "create-event", component: CreateEventComponent },
@@ -20,10 +23,11 @@ const routes: Routes = [
     path: "watermelon-mountain-ranch",
     component: WatermelonMountainRanchComponent
   }
+
 ];
 
 @NgModule({
   imports: [NgbModule, RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
