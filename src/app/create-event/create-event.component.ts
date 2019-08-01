@@ -23,7 +23,6 @@ export class CreateEventComponent implements OnInit {
   onSubmit(f) {
     let post = { event: f };
     this.http.post(this.url, post).subscribe(response => {
-      console.log("Success!", response);
       this.posts.push(response);
       this.eventForm.resetForm();
     });

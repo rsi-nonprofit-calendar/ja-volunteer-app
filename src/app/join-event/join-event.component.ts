@@ -2,6 +2,8 @@ import { CreateEventComponent } from './../create-event/create-event.component';
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { JoinEventService } from './join-event.service';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -9,25 +11,19 @@ import { Router } from "@angular/router";
   templateUrl: './join-event.component.html',
   styleUrls: ['./join-event.component.css']
 })
-export class JoinEventComponent implements OnInit {
-  // posts: any[];
-  // private url = "http://jsonplaceholder.typicode.com/posts";
-  // constructor(private http: HttpClient) { }
+export class JoinEventComponent {
+  title = "Event Details"
 
-  ngOnInit() {
+  details;
+
+  constructor(service: JoinEventService) {
+    this.details = service.getDetails();
   }
-
-
-
-
-
-  // ngOnInit() {
-  //   this.posts = [];
-  // }
-
-  // clickJoin() {
-  //   let post = userID;
-  //   this.http.post(this.url, post);
-  // }
-
 }
+
+
+
+
+
+
+

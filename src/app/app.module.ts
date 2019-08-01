@@ -1,3 +1,4 @@
+import { JoinEventService } from './join-event/join-event.service';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -65,7 +66,7 @@ import { JoinEventComponent } from './join-event/join-event.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [JoinEventService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
