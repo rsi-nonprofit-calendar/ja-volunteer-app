@@ -12,13 +12,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./join-event.component.css']
 })
 export class JoinEventComponent {
-  title = "Event Details"
+  details: any[];
+  constructor(private service: JoinEventService) { }
 
-  details;
+  ngOnInit() {
 
-  constructor(service: JoinEventService) {
-    this.details = service.getDetails();
+    this.service.getDetails().subscribe(details => {
+      this.details = details;
+    });
   }
+
+
 }
 
 
