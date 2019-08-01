@@ -4,8 +4,18 @@
   <div ngModelGroup="Name" #Name="ngModelGroup">
     <div class="form-group">
       <label for="eventName">Event Name</label>
-      <input #event required minlength="3" maxlength="140" ngModel name="name" #name="ngModel" id="name" type="text"
-        class="form-control" />
+      <input
+        #event
+        required
+        minlength="3"
+        maxlength="140"
+        ngModel
+        name="name"
+        #name="ngModel"
+        id="name"
+        type="text"
+        class="form-control"
+      />
       <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
         <div *ngIf="name.errors.required">Event name is required.</div>
         <div *ngIf="name.errors.minlength">
@@ -31,8 +41,17 @@
   <div ngModelGroup="details" #details="ngModelGroup">
     <div class="form-group">
       <label for="eventDetails">Event Details</label>
-      <textarea ngModel required minlength="10" #details="ngModel" name="details" id="details" cols="30" rows="10"
-        class="form-control"></textarea>
+      <textarea
+        ngModel
+        required
+        minlength="10"
+        #details="ngModel"
+        name="details"
+        id="details"
+        cols="30"
+        rows="10"
+        class="form-control"
+      ></textarea>
       <div class="alert alert-danger" *ngIf="details.touched && !details.valid">
         <div *ngIf="details.errors.required">Event details are required.</div>
         <div *ngIf="details.errors.minlength">
