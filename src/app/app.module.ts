@@ -1,3 +1,4 @@
+import { JoinEventService } from "./join-event/join-event.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -84,7 +85,7 @@ import { FaqComponent } from "./faq/faq.component";
       useFactory: adapterFactory
     })
   ],
-  providers: [],
+  providers: [JoinEventService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
