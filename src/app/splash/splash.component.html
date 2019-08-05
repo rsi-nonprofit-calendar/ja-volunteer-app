@@ -1,11 +1,13 @@
 <div class="container-fluid mt-5 pt-5">
   <!--JUMBOTRON-->
   <div class="container-fluid">
-    <div class="jumbotron jumbotron-fluid rounded p-5">
+    <div
+      class="jumbotron jumbotron-fluid rounded col-lg-16 col-md-12 p-3 mx-auto"
+    >
       <ngb-carousel>
         <ng-template ngbSlide>
           <div class="row">
-            <div class="col-9">
+            <div class="col-lg-9 col-md-8 p-3 mx-auto">
               <a href="calendar" alt="Events Calendar" title="Events Calendar"
                 ><img
                   src="assets/volunteer-banner.svg"
@@ -13,8 +15,8 @@
                   class="rounded mx-auto"
               /></a>
             </div>
-            <div class="col-3">
-              <div class="card">
+            <div class="col-lg-3 p-3 mx-auto">
+              <div class="card d-none d-lg-block">
                 <h3 class="font-weight-bold text-light">
                   Welcome to the Volunteer Calendar!
                 </h3>
@@ -42,7 +44,7 @@
               </a>
             </div>
             <div class="col-3">
-              <div class="card">
+              <div class="card d-none d-lg-block">
                 <h3 class="font-weight-bold text-light">
                   Watermelon Mountain Ranch
                 </h3>
@@ -64,7 +66,7 @@
               />
             </div>
             <div class="col-3">
-              <div class="card">
+              <div class="card d-none d-lg-block">
                 <h3 class="font-weight-bold text-light">
                   Habitat For Humanity
                 </h3>
@@ -83,54 +85,50 @@
 <!-- VOLUNTEER BY LINKS -->
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col p-5">
-      <div class="card">
-        <a href="categories" class="btn btn-info"
-          ><p class="font-weight-bold">
-            Volunteer By Organization
-          </p>
-        </a>
-      </div>
+  <div class="row text-center">
+    <div class="col-lg-6 col-md-7 p-3 mx-auto">
+      <a href="categories">
+        <div
+          class="btn btn-info m-2 font-weight-bold"
+          id="volunteer-by-buttons"
+        >
+          Volunteer By Category
+        </div>
+      </a>
     </div>
 
-    <div class="col p-5">
-      <div class="card">
-        <a href="calendar" class="btn btn-info"
-          ><p class="font-weight-bold">Volunteer By Date</p></a
+    <div class="col-lg-6 col-md-7 p-3 mx-auto">
+      <a href="calendar">
+        <div
+          class="btn btn-info m-2 font-weight-bold"
+          id="volunteer-by-buttons"
         >
-      </div>
+          Volunteer By Date
+        </div>
+      </a>
     </div>
   </div>
 </div>
 
 <!--SUB LINKS:-->
 <div class="container-fluid">
-  <div class="row">
-    <div class="card-columns mx-auto">
-      <div class="col p-5">
-        <div class="card">
-          <a href="#" alt="FAQs" title="FAQs">
-            <div class="fa-7x fas fa-question-circle" id="faq-icon"></div>
-          </a>
-        </div>
-      </div>
+  <div class="row text-center">
+    <div class="col-lg-4 col-md-7 p-3 mx-auto">
+      <a href="faq" alt="FAQs" title="FAQs">
+        <div class="fa-7x fas fa-question-circle" id="faq-icon"></div>
+      </a>
+    </div>
 
-      <div class="col p-5">
-        <div class="card">
-          <a href="#" alt="Gallery" title="Gallery">
-            <div class="fa-7x fas fa-images" id="gallery-icon"></div>
-          </a>
-        </div>
-      </div>
+    <div class="col-lg-4 col-md-7 p-3 mx-auto">
+      <a href="gallery" alt="Gallery" title="Gallery">
+        <div class="fa-7x fas fa-images" id="gallery-icon"></div>
+      </a>
+    </div>
 
-      <div class="col p-5">
-        <div class="card">
-          <a href="#" alt="Donate" title="Donate">
-            <div class="fa-7x fas fa-hand-holding-usd" id="donate-icon"></div>
-          </a>
-        </div>
-      </div>
+    <div class="col-lg-4 col-md-7 p-3 mx-auto">
+      <a href="donate" alt="Donate" title="Donate">
+        <div class="fa-7x fas fa-hand-holding-usd" id="donate-icon"></div>
+      </a>
     </div>
   </div>
 </div>
