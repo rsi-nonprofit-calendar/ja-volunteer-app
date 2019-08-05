@@ -12,7 +12,7 @@ export class JoinEventService {
 
 
     getDetails() {
-        return this.http.get(this.url);
+        return this.http.get<any[]>(this.url);
     }
 }
 

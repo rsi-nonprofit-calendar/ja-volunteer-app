@@ -71,7 +71,6 @@ import { FaqComponent } from "./faq/faq.component";
     NgbModule,
     CommonModule,
     BrowserModule,
-
     AppRoutingModule,
     FormsModule,
     OwlDateTimeModule,
@@ -88,4 +87,4 @@ import { FaqComponent } from "./faq/faq.component";
   providers: [JoinEventService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
