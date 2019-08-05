@@ -1,4 +1,4 @@
-import { JoinEventService } from './join-event/join-event.service';
+import { JoinEventService } from "./join-event/join-event.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -32,9 +32,11 @@ import { HousingCategoryComponent } from "./housing-category/housing-category.co
 import { ChildrenCategoryComponent } from "./children-category/children-category.component";
 import { HealthcareCategoryComponent } from "./healthcare-category/healthcare-category.component";
 import { TechnologyCategoryComponent } from "./technology-category/technology-category.component";
-import { JoinEventComponent } from './join-event/join-event.component';
-import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/watermelon-mountain-ranch.component';
-
+import { JoinEventComponent } from "./join-event/join-event.component";
+import { WatermelonMountainRanchComponent } from "./watermelon-mountain-ranch/watermelon-mountain-ranch.component";
+import { DonateComponent } from "./donate/donate.component";
+import { GalleryComponent } from "./gallery/gallery.component";
+import { FaqComponent } from "./faq/faq.component";
 
 @NgModule({
   declarations: [
@@ -59,8 +61,16 @@ import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/wa
     ChildrenCategoryComponent,
     HealthcareCategoryComponent,
     TechnologyCategoryComponent,
+<<<<<<< HEAD
     JoinEventComponent,
     WatermelonMountainRanchComponent
+=======
+    WatermelonMountainRanchComponent,
+    DonateComponent,
+    GalleryComponent,
+    FaqComponent,
+    JoinEventComponent
+>>>>>>> 69b87213f367262f50347d5b6b670c6680bc6695
   ],
   imports: [
     NgbModule,
@@ -83,4 +93,4 @@ import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/wa
   providers: [JoinEventService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
