@@ -1,4 +1,5 @@
 import { JoinEventService } from "./join-event/join-event.service";
+import { CookieService } from "ngx-cookie-service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -84,7 +85,7 @@ import { FaqComponent } from "./faq/faq.component";
       useFactory: adapterFactory
     })
   ],
-  providers: [JoinEventService],
+  providers: [JoinEventService, CookieService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
