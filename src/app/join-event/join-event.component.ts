@@ -17,8 +17,9 @@ export class JoinEventComponent {
 
   ngOnInit() {
 
-    this.service.getDetails().subscribe(details => {
-      this.details = details;
+    this.service.getDetails().subscribe(response => {
+      this.details = response;
+
     });
   }
 

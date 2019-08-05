@@ -59,7 +59,7 @@ import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/wa
     ChildrenCategoryComponent,
     HealthcareCategoryComponent,
     TechnologyCategoryComponent,
-    JoinEventComponent
+    JoinEventComponent,
     WatermelonMountainRanchComponent
   ],
   imports: [

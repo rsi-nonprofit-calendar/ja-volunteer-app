@@ -7,7 +7,6 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { CategoriesComponent } from "./categories/categories.component";
 import { CalendarComponent } from "./calendar/calendar.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
-import { CreateEventComponent } from "./create-event/create-event.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { WatermelonMountainRanchComponent } from "./watermelon-mountain-ranch/watermelon-mountain-ranch.component";
 
@@ -15,7 +14,7 @@ const routes: Routes = [
   { path: "", component: SplashComponent },
   { path: "categories", component: CategoriesComponent },
   { path: "calendar", component: CalendarComponent },
-  { path: "join-event", component: JoinEventComponent }
+  { path: "join-event", component: JoinEventComponent },
   { path: "profile", component: ProfileComponent },
   { path: "aboutUs", component: AboutUsComponent },
   { path: "create-event", component: CreateEventComponent },
