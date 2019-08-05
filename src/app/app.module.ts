@@ -61,22 +61,16 @@ import { FaqComponent } from "./faq/faq.component";
     ChildrenCategoryComponent,
     HealthcareCategoryComponent,
     TechnologyCategoryComponent,
-<<<<<<< HEAD
-    JoinEventComponent,
-    WatermelonMountainRanchComponent
-=======
     WatermelonMountainRanchComponent,
     DonateComponent,
     GalleryComponent,
     FaqComponent,
     JoinEventComponent
->>>>>>> 69b87213f367262f50347d5b6b670c6680bc6695
   ],
   imports: [
     NgbModule,
     CommonModule,
     BrowserModule,
-
     AppRoutingModule,
     FormsModule,
     OwlDateTimeModule,
@@ -93,4 +87,4 @@ import { FaqComponent } from "./faq/faq.component";
   providers: [JoinEventService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
