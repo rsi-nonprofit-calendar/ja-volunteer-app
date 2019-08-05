@@ -2,18 +2,17 @@ import { HttpClient } from '@angular/common/http';
 
 
 export class JoinEventService {
-    constructor(http: HttpClient) {
-        http.get("http://jsonplaceholder.typicode.com/posts")
-            .subscribe(response => {
-                console.log(response);
-            });
+    private url = "http://jsonplaceholder.typicode.com/posts";
+    constructor(private http: HttpClient) {
+
+
     }
 
 
 
 
     getDetails() {
-        return ["Event Name", "Time", "Details"];
+        return this.http.get(this.url);
     }
 }
 
