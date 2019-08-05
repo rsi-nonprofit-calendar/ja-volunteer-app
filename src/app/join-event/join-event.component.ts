@@ -1,18 +1,17 @@
-import { CreateEventComponent } from './../create-event/create-event.component';
+import { CreateEventComponent } from "./../create-event/create-event.component";
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { JoinEventService } from './join-event.service';
-import { HttpClient } from '@angular/common/http';
-
+import { JoinEventService } from "./join-event.service";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
-  selector: 'join-event',
-  templateUrl: './join-event.component.html',
-  styleUrls: ['./join-event.component.css']
+  selector: "join-event",
+  templateUrl: "./join-event.component.html",
+  styleUrls: ["./join-event.component.css"]
 })
 export class JoinEventComponent {
-  title = "Event Details"
+  title = "Event Details";
 
   details;
 
@@ -20,10 +19,3 @@ export class JoinEventComponent {
     this.details = service.getDetails();
   }
 }
-
-
-
-
-
-
-
