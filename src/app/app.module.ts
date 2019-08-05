@@ -31,10 +31,11 @@ import { HousingCategoryComponent } from "./housing-category/housing-category.co
 import { ChildrenCategoryComponent } from "./children-category/children-category.component";
 import { HealthcareCategoryComponent } from "./healthcare-category/healthcare-category.component";
 import { TechnologyCategoryComponent } from "./technology-category/technology-category.component";
-import { WatermelonMountainRanchComponent } from './watermelon-mountain-ranch/watermelon-mountain-ranch.component';
-import { DonateComponent } from './donate/donate.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { FaqComponent } from './faq/faq.component';
+import { JoinEventComponent } from "./join-event/join-event.component";
+import { WatermelonMountainRanchComponent } from "./watermelon-mountain-ranch/watermelon-mountain-ranch.component";
+import { DonateComponent } from "./donate/donate.component";
+import { GalleryComponent } from "./gallery/gallery.component";
+import { FaqComponent } from "./faq/faq.component";
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { FaqComponent } from './faq/faq.component';
     WatermelonMountainRanchComponent,
     DonateComponent,
     GalleryComponent,
-    FaqComponent
+    FaqComponent,
+    JoinEventComponent
   ],
   imports: [
     NgbModule,
