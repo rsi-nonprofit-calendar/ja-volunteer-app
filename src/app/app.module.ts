@@ -38,6 +38,8 @@ import { WatermelonMountainRanchComponent } from "./watermelon-mountain-ranch/wa
 import { DonateComponent } from "./donate/donate.component";
 import { GalleryComponent } from "./gallery/gallery.component";
 import { FaqComponent } from "./faq/faq.component";
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./register/register.component";
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { FaqComponent } from "./faq/faq.component";
     DonateComponent,
     GalleryComponent,
     FaqComponent,
-    JoinEventComponent
+    JoinEventComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     NgbModule,

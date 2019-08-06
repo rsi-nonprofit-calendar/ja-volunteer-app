@@ -1,0 +1,72 @@
+<div class="container-fluid mt-4 pt-4">
+  <h1 class="text-center text-info font-weight-bold">
+    Sign Up For The Volunteer Calendar
+  </h1>
+  <div class="row">
+    <div class="mx-auto">
+      <div class="col p-5">
+        <div class="fa-10x fas fa-hand-holding-heart"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-6 col-lg-8 mx-auto">
+      <form
+        [formGroup]="newUserForm"
+        (ngSubmit)="onFormSubmit(newUserForm.value)"
+      >
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            formControlName="UserName"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="First Name"
+            formControlName="FirstName"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+            formControlName="LastName"
+          />
+        </div>
+        <div class="input-group mb-4">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            formControlName="Email"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            formControlName="Password"
+          />
+        </div>
+        <div class="input-group mb-4">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Describe Yourself"
+            formControlName="UserAboutMe"
+          />
+        </div>
+        <button type="submit" class="btn btn-block btn-info">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
