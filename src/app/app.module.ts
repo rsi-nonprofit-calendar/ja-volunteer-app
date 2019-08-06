@@ -14,8 +14,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { PageComponent } from "./page/page.component";
 import { CreateEventComponent } from "./create-event/create-event.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { SignInModal } from "./sign-in/sign-in.component";
-import { SignUpModal } from "./sign-up/sign-up.component";
+import { SignInComponent } from "./sign-in/sign-in.component";
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { CategoriesComponent } from "./categories/categories.component";
@@ -53,8 +52,7 @@ import { RegisterComponent } from "./register/register.component";
     SplashComponent,
     CalendarComponent,
     AboutUsComponent,
-    SignInModal,
-    SignUpModal,
+    SignInComponent,
     AnimalsCategoryComponent,
     TransportationCategoryComponent,
     EqualityCategoryComponent,

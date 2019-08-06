@@ -11,10 +11,7 @@
   </div>
   <div class="row">
     <div class="col-xl-6 col-lg-8 mx-auto">
-      <form
-        [formGroup]="newUserForm"
-        (ngSubmit)="onFormSubmit(newUserForm.value)"
-      >
+      <form [formGroup]="UserForm" (ngSubmit)="onFormSubmit(UserForm.value)">
         <div class="input-group mb-3">
           <input
             type="text"

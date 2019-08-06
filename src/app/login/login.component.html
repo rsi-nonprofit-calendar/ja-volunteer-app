@@ -3,9 +3,6 @@
     <div class="card-body">
       <form name="form" (ngSubmit)="login()" #f="ngForm">
         <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="icon-user"></i></span>
-          </div>
           <input
             type="text"
             name="Email"
@@ -16,9 +13,6 @@
           />
         </div>
         <div class="input-group mb-4">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="icon-lock"></i></span>
-          </div>
           <input
             type="password"
             name="Password"
@@ -43,7 +37,7 @@
             </button>
           </div>
           <div class="col-6 text-right">
-            <button type="button" class="btn btn-outline-info px-0">
+            <button type="button" class="btn btn-outline-info">
               Forgot password?
             </button>
           </div>

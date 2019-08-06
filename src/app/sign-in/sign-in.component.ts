@@ -7,7 +7,7 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
   templateUrl: "./sign-in.component.html",
   styleUrls: ["./sign-in.component.css"]
 })
-export class SignInModal {
+export class SignInComponent {
   closeResult: string;
 
   constructor(private modalService: NgbModal) {}

@@ -58,3 +58,7 @@ section {
   margin: 0 auto;
   padding: 2em;
 }
+
+.no-indicators .carousel-indicators {
+  display: none;
+}
