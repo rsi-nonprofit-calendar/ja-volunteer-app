@@ -21,28 +21,11 @@ a {
 
 .jumbotron {
   text-align: center;
-  height: 300px;
-}
-
-.carousel-caption {
-  position: relative;
-  text-align: center;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.5), 2px 2px 16px rgba(0, 0, 0, 0);
+  background-color: #de795b;
 }
 
 .jumbotron img {
   width: auto;
-  height: 200px;
-}
-
-.carousel-caption h3 {
-  font-weight: bold;
-}
-
-.carousel-caption {
-  font-weight: bold;
-  vertical-align: bottom;
 }
 
 .container {
@@ -57,8 +40,4 @@ section {
   width: 80%;
   margin: 0 auto;
   padding: 2em;
-}
-
-.no-indicators .carousel-indicators {
-  display: none;
 }
