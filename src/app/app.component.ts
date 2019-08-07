@@ -9,7 +9,7 @@ import { CookieService } from "ngx-cookie-service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  private cookieValue: string;
+  private cookieValue = "UNKNOWN";
   title = "vol-army-app";
 
   constructor(
@@ -18,8 +18,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   public ngOnInit(): void {
-    this.cookieService.set("volunteer-calendar-cookie", "welcome-user-cookie");
-    this.cookieValue = this.cookieService.get("volunteer-calendar-cookie");
-    this.cookieService.delete("volunteer-calendar-cookie", " / ", " / ");
+    this.cookieService.set("Volunteer Calendar", "Cookies! Nom! Nom!", 1);
+    this.cookieValue = this.cookieService.get("Volunteer Calendar");
   }
 }

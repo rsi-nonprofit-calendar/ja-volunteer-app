@@ -63,7 +63,13 @@
                 (click)="profile()"
                 >Profile</a
               >
-              <app-sign-up></app-sign-up>
+              <a
+                class="dropdown-item"
+                ngbDropdownItem
+                routerLink="register"
+                (click)="register()"
+                >Sign Up</a
+              >
               <app-sign-in></app-sign-in>
               <a
                 class="dropdown-item"
@@ -75,7 +81,6 @@
               >
             </div>
           </li>
-          <!-- </ul> -->
           <form class="form-inline my-2 my-lg-0">
             <input
               class="form-control mr-sm-2"

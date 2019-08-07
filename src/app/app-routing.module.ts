@@ -12,9 +12,13 @@ import { GalleryComponent } from "./gallery/gallery.component";
 import { FaqComponent } from "./faq/faq.component";
 import { DonateComponent } from "./donate/donate.component";
 import { WatermelonMountainRanchComponent } from "./watermelon-mountain-ranch/watermelon-mountain-ranch.component";
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./register/register.component";
 
 const routes: Routes = [
   { path: "", component: SplashComponent },
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent },
   { path: "categories", component: CategoriesComponent },
   { path: "calendar", component: CalendarComponent },
   { path: "join-event", component: JoinEventComponent },

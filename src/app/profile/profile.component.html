@@ -5,30 +5,76 @@
   <br />
   <!--JUMBOTRON-->
   <div class="container-fluid">
-    <div
-      class="jumbotron jumbotron-fluid rounded col-lg-16 col-md-12 p-3 d-none d-md-block mx-auto"
-    >
-      <div class="row">
-        <div class="col-lg-9 col-md-8 p-3 mx-auto">
-          <a href="calendar" alt="events calendar" title="Events Calendar"
-            ><img
-              src="assets/volunteer-banner.svg"
-              alt="Welcome To The Volunteer Calendar"
-              class="rounded mx-auto"
-          /></a>
-        </div>
-        <div class="col-3 p-3 mx-auto">
-          <div class="card d-none d-xl-block">
-            <h3 class="font-weight-bold text-light">
-              Welcome to the Volunteer Calendar!
-            </h3>
-            <p class="text-light">
-              Please explore and find organizations or upcoming events to join.
-            </p>
+    <div class="jumbotron jumbotron-fluid rounded p-3 d-none d-md-block">
+      <ngb-carousel
+        [showNavigationArrows]="showNavigationArrows"
+        [showNavigationIndicators]="showNavigationIndicators"
+      >
+        <ng-template ngbSlide>
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <a href="calendar" alt="Events Calendar" title="Events Calendar"
+                ><img
+                  src="assets/volunteer-banner.svg"
+                  alt="Welcome To The Volunteer Calendar"
+                  class="rounded img-fluid text-centered mx-auto"
+              /></a>
+            </div>
+            <div class="col px-3 mx-auto d-none d-xl-block">
+              <h3 class="font-weight-bold text-light">
+                Welcome to the Volunteer Calendar!
+              </h3>
+              <p class="text-light">
+                Please explore and find organizations or upcoming events to
+                join.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <a href="calendar" alt="Events Calendar" title="Events Calendar"
+                ><img
+                  src="assets/volunteer-banner.svg"
+                  alt="Welcome To The Volunteer Calendar"
+                  class="rounded img-fluid text-centered mx-auto"
+              /></a>
+            </div>
+            <div class="col px-3 mx-auto d-none d-xl-block">
+              <h3 class="font-weight-bold text-light">
+                Welcome to the Volunteer Calendar!
+              </h3>
+              <p class="text-light">
+                Please explore and find organizations or upcoming events to
+                join.
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <a href="calendar" alt="Events Calendar" title="Events Calendar"
+                ><img
+                  src="assets/volunteer-banner.svg"
+                  alt="Welcome To The Volunteer Calendar"
+                  class="rounded img-fluid text-centered mx-auto"
+              /></a>
+            </div>
+            <div class="col px-3 mx-auto d-none d-xl-block">
+              <h3 class="font-weight-bold text-light">
+                Welcome to the Volunteer Calendar!
+              </h3>
+              <p class="text-light">
+                Please explore and find organizations or upcoming events to
+                join.
+              </p>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-carousel>
     </div>
   </div>
-  <app-calendar></app-calendar>
 </div>
+<app-calendar></app-calendar>
