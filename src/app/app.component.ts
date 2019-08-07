@@ -9,7 +9,7 @@ import { CookieService } from "ngx-cookie-service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  private cookieValue = "UNKNOWN";
+  private cookieValue = "Volunteer";
   title = "vol-army-app";
 
   constructor(

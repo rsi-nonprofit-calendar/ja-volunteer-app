@@ -11,13 +11,14 @@ export class LoginService {
   token: string;
   header: any;
   constructor(private http: HttpClient) {
-    this.Url = "http://localhost:14812/api/Login/";
+    // this.Url = "http://localhost:14812/api/Login/"; // Test environment on local machine... Replace with AWS info
+    this.Url = "http://jsonplaceholder.typicode.com/posts";
 
     const headerSettings: { [name: string]: string | string[] } = {};
     this.header = new HttpHeaders(headerSettings);
   }
   Login(model: any) {
-    debugger;
+    // debugger;
     var a = this.Url + "UserLogin";
     return this.http.post<any>(this.Url + "UserLogin", model, {
       headers: this.header

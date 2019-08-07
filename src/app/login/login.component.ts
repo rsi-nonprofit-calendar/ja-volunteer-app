@@ -19,13 +19,13 @@ export class LoginComponent {
     sessionStorage.clear();
   }
   login() {
-    debugger;
+    // debugger;
     this.LoginService.Login(this.model).subscribe(
       data => {
-        debugger;
+        // debugger;
         if (data.Status == "Success") {
           this.router.navigate(["profile"]);
-          debugger;
+          // debugger;
         } else {
           this.errorMessage = data.Message;
         }
