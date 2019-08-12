@@ -39,7 +39,7 @@ import { GalleryComponent } from "./gallery/gallery.component";
 import { FaqComponent } from "./faq/faq.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
-
+import { OrganizationDashboardComponent } from "./organization-dashboard/organization-dashboard.component"
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +68,8 @@ import { RegisterComponent } from "./register/register.component";
     FaqComponent,
     JoinEventComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    OrganizationDashboardComponent
   ],
   imports: [
     NgbModule,
@@ -90,4 +91,4 @@ import { RegisterComponent } from "./register/register.component";
   providers: [JoinEventService, CookieService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
