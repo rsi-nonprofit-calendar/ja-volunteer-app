@@ -1,4 +1,5 @@
 import { JoinEventService } from "./join-event/join-event.service";
+import { CookieService } from "ngx-cookie-service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -13,8 +14,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { PageComponent } from "./page/page.component";
 import { CreateEventComponent } from "./create-event/create-event.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { SignInModal } from "./sign-in/sign-in.component";
-import { SignUpModal } from "./sign-up/sign-up.component";
+import { SignInComponent } from "./sign-in/sign-in.component";
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { CategoriesComponent } from "./categories/categories.component";
@@ -37,6 +37,8 @@ import { WatermelonMountainRanchComponent } from "./watermelon-mountain-ranch/wa
 import { DonateComponent } from "./donate/donate.component";
 import { GalleryComponent } from "./gallery/gallery.component";
 import { FaqComponent } from "./faq/faq.component";
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./register/register.component";
 
 @NgModule({
   declarations: [
@@ -50,8 +52,7 @@ import { FaqComponent } from "./faq/faq.component";
     SplashComponent,
     CalendarComponent,
     AboutUsComponent,
-    SignInModal,
-    SignUpModal,
+    SignInComponent,
     AnimalsCategoryComponent,
     TransportationCategoryComponent,
     EqualityCategoryComponent,
@@ -65,7 +66,9 @@ import { FaqComponent } from "./faq/faq.component";
     DonateComponent,
     GalleryComponent,
     FaqComponent,
-    JoinEventComponent
+    JoinEventComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     NgbModule,
@@ -84,7 +87,7 @@ import { FaqComponent } from "./faq/faq.component";
       useFactory: adapterFactory
     })
   ],
-  providers: [JoinEventService],
+  providers: [JoinEventService, CookieService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

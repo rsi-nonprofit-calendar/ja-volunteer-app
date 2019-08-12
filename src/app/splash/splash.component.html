@@ -1,36 +1,39 @@
-<div class="container-fluid mt-5 pt-5">
+<div class="container-fluid mt-4 pt-4">
+  <h1 class="text-center text-info font-weight-bold">
+    The Volunteer Calendar
+  </h1>
+  <br />
   <!--JUMBOTRON-->
   <div class="container-fluid">
-    <div
-      class="jumbotron jumbotron-fluid rounded col-lg-16 col-md-12 p-3 mx-auto"
-    >
-      <ngb-carousel>
+    <div class="jumbotron jumbotron-fluid rounded p-3 d-none d-md-block">
+      <ngb-carousel
+        [showNavigationArrows]="showNavigationArrows"
+        [showNavigationIndicators]="showNavigationIndicators"
+      >
         <ng-template ngbSlide>
-          <div class="row">
-            <div class="col-lg-9 col-md-8 p-3 mx-auto">
+          <div class="row justify-content-center">
+            <div class="col-8">
               <a href="calendar" alt="Events Calendar" title="Events Calendar"
                 ><img
                   src="assets/volunteer-banner.svg"
                   alt="Welcome To The Volunteer Calendar"
-                  class="rounded mx-auto"
+                  class="rounded img-fluid text-centered mx-auto"
               /></a>
             </div>
-            <div class="col-lg-3 p-3 mx-auto">
-              <div class="card d-none d-lg-block">
-                <h3 class="font-weight-bold text-light">
-                  Welcome to the Volunteer Calendar!
-                </h3>
-                <p class="d-lg-none d-xl-block text-light">
-                  Please explore and find organizations or upcoming events to
-                  join.
-                </p>
-              </div>
+            <div class="col px-3 mx-auto d-none d-xl-block">
+              <h3 class="font-weight-bold text-light">
+                Welcome to the Volunteer Calendar!
+              </h3>
+              <p class="text-light">
+                Please explore and find organizations or upcoming events to
+                join.
+              </p>
             </div>
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="row">
-            <div class="col-9">
+          <div class="row justify-content-center">
+            <div class="col-8">
               <a
                 href="watermelon-mountain-ranch"
                 alt="Watermelon Mountain Ranch"
@@ -39,41 +42,37 @@
                 <img
                   src="assets/puppyadoption.svg"
                   alt="Watermelon Mountain Ranch"
-                  class="rounded mx-auto"
+                  class="rounded img-fluid mx-auto"
                 />
               </a>
             </div>
-            <div class="col-3">
-              <div class="card d-none d-lg-block">
-                <h3 class="font-weight-bold text-light">
-                  Watermelon Mountain Ranch
-                </h3>
-                <p class="d-lg-none d-xl-block text-light">
-                  Puppy adoption event 8/31 <br />9:00am-3:00pm <br />@ Petsmart
-                  on Coors Blvd.
-                </p>
-              </div>
+            <div class="col px-3 mx-auto d-none d-xl-block">
+              <h3 class="font-weight-bold text-light">
+                Watermelon Mountain Ranch
+              </h3>
+              <p class="text-light">
+                Puppy adoption event 8/31 <br />9:00am-3:00pm @ Petsmart on
+                Coors Blvd
+              </p>
             </div>
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="row">
-            <div class="col-9">
+          <div class="row justify-content-center">
+            <div class="col-8">
               <img
                 src="assets/habitat-for-humanity-banner.svg"
                 alt="Habitat For Humanity"
-                class="rounded mx-auto"
+                class="col rounded img-fluid mx-auto"
               />
             </div>
-            <div class="col-3">
-              <div class="card d-none d-lg-block">
-                <h3 class="font-weight-bold text-light">
-                  Habitat For Humanity
-                </h3>
-                <p class="d-lg-none d-xl-block text-light">
-                  A world where everyone has a decent place to live.
-                </p>
-              </div>
+            <div class="col px-3 mx-auto d-none d-xl-block">
+              <h3 class="font-weight-bold text-light">
+                Habitat For Humanity
+              </h3>
+              <p class="text-light">
+                A world where everyone has a decent place to live.
+              </p>
             </div>
           </div>
         </ng-template>
