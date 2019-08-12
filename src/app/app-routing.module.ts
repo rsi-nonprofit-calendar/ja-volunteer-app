@@ -12,6 +12,7 @@ import { GalleryComponent } from "./gallery/gallery.component";
 import { FaqComponent } from "./faq/faq.component";
 import { DonateComponent } from "./donate/donate.component";
 import { WatermelonMountainRanchComponent } from "./watermelon-mountain-ranch/watermelon-mountain-ranch.component";
+import { OrganizationDashboardComponent } from './organization-dashboard/organization-dashboard.component';
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 
@@ -31,11 +32,12 @@ const routes: Routes = [
   {
     path: "watermelon-mountain-ranch",
     component: WatermelonMountainRanchComponent
-  }
+  },
+  { path: "organization-dashboard", component: OrganizationDashboardComponent }
 ];
 
 @NgModule({
   imports: [NgbModule, RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
