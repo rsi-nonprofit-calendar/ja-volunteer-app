@@ -2,7 +2,8 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:400,700";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
 @import "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
-@import "../node_modules/angular-calendar/css/angular-calendar.css";
+@import "https://unpkg.com/angular-calendar@0.27.15/css/angular-calendar.css";
+@import "https://unpkg.com/flatpickr@4.6.2/dist/flatpickr.css";
 
 body,
 html {
