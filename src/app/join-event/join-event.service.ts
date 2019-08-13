@@ -14,6 +14,7 @@ export class JoinEventService {
     getDetails() {
         return this.http.get<any[]>(this.url);
     }
+
+
+
 }
-
-

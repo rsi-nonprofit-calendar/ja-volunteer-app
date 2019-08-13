@@ -15,6 +15,7 @@ import { WatermelonMountainRanchComponent } from "./watermelon-mountain-ranch/wa
 import { OrganizationDashboardComponent } from './organization-dashboard/organization-dashboard.component';
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
+import { VolunteerDashboardComponent } from './volunteer-dashboard/volunteer-dashboard.component';
 
 const routes: Routes = [
   { path: "", component: SplashComponent },
@@ -33,7 +34,8 @@ const routes: Routes = [
     path: "watermelon-mountain-ranch",
     component: WatermelonMountainRanchComponent
   },
-  { path: "organization-dashboard", component: OrganizationDashboardComponent }
+  { path: "organization-dashboard", component: OrganizationDashboardComponent },
+  { path: "volunteer-dashboard", component: VolunteerDashboardComponent }
 ];
 
 @NgModule({

@@ -39,7 +39,8 @@ import { GalleryComponent } from "./gallery/gallery.component";
 import { FaqComponent } from "./faq/faq.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
-import { OrganizationDashboardComponent } from "./organization-dashboard/organization-dashboard.component"
+import { OrganizationDashboardComponent } from "./organization-dashboard/organization-dashboard.component";
+import { VolunteerDashboardComponent } from './volunteer-dashboard/volunteer-dashboard.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,8 @@ import { OrganizationDashboardComponent } from "./organization-dashboard/organiz
     JoinEventComponent,
     LoginComponent,
     RegisterComponent,
-    OrganizationDashboardComponent
+    OrganizationDashboardComponent,
+    VolunteerDashboardComponent
   ],
   imports: [
     NgbModule,
