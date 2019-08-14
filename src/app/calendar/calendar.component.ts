@@ -93,11 +93,17 @@ export class CalendarComponent {
   refresh: Subject<any> = new Subject();
 
   events: CalendarEvent[] = [
-    //Example Event
+    //Example Events
     {
       title: "Watermelon Mountain Ranch Adoptathon",
       start: new Date(),
       end: addHours(startOfDay(new Date()), 2),
+      color: colors.example
+    },
+    {
+      title: "RSI Blood Donation Event",
+      start: new Date(),
+      end: addHours(startOfDay(new Date()), 4),
       color: colors.example
     }
   ];
