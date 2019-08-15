@@ -1,3 +1,4 @@
+import { CookieService } from 'ngx-cookie-service';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
@@ -10,7 +11,9 @@ export class LoginService {
   Url: string;
   token: string;
   header: any;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient
+
+  ) {
     // this.Url = "http://localhost:14812/api/Login/"; // Test environment on local machine... Replace with AWS info
     this.Url = "http://jsonplaceholder.typicode.com/posts";
 
@@ -18,12 +21,15 @@ export class LoginService {
     this.header = new HttpHeaders(headerSettings);
   }
   Login(model: any) {
-    // debugger;
     var a = this.Url + "UserLogin";
     return this.http.post<any>(this.Url + "UserLogin", model, {
       headers: this.header
     });
   }
+
+
+
+
   CreateUser(register: Register) {
     const httpOptions = {
       headers: new HttpHeaders({ "Content-Type": "application/json" })
