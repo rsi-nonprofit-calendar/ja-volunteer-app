@@ -1,3 +1,4 @@
+
 // import { Component, OnInit } from '@angular/core';
 
 // @Component({
@@ -38,7 +39,7 @@ import {
   CalendarEventTimesChangedEvent,
   CalendarView
 } from "angular-calendar";
-
+import { CreateEventComponent } from './../create-event/create-event.component';
 const colors: any = {
   red: {
     primary: "#ad2121",
@@ -87,12 +88,20 @@ export class CalendarComponent {
         this.events = this.events.filter(iEvent => iEvent !== event);
         this.handleEvent("Deleted", event);
       }
-    }
+    },
   ];
 
   refresh: Subject<any> = new Subject();
 
   events: CalendarEvent[] = [
+    {
+      start: subDays(startOfDay(new Date()), 1),
+      end: addDays(new Date(), 1),
+      title: "Booyah",
+      color: colors.blue,
+      actions: this.actions,
+      allDay: false,
+    },
     {
       start: subDays(startOfDay(new Date()), 1),
       end: addDays(new Date(), 1),
@@ -135,7 +144,7 @@ export class CalendarComponent {
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModal) {}
+  constructor(private modal: NgbModal) { }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
