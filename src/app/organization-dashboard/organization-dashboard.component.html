@@ -1,4 +1,15 @@
-<p>organization-dashboard works!</p>
-<button btn class="btn btn-primary" routerLink="/create-event">Create an Event</button>
-<button btn class="btn btn-primary" routerLink="/calendar">My Calendar</button>
-<join-event></join-event>
+<div class="buttones">
+    <button btn class="btn btn-primary" routerLink="/create-event">Create a New Event</button>
+    <button btn class="btn btn-primary" routerLink="/calendar">My Calendar</button>
+</div>
+
+
+<h2>Events I'm Hosting:</h2>
+<ul class="list-group">
+    <li *ngFor="let detail of details" class="list-group-item">
+        <strong>Event:</strong> {{ detail.title }} <br>
+        <strong>Event details:</strong> {{ detail.body }}
+    </li>
+</ul>
+
+<app-calendar></app-calendar>

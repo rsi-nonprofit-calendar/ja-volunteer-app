@@ -1,12 +1,13 @@
 import { JoinEventService } from './../join-event/join-event.service';
+import { JoinEventComponent } from './../join-event/join-event.component';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
 @Component({
-  selector: 'organization-dashboard',
-  templateUrl: './organization-dashboard.component.html',
-  styleUrls: ['./organization-dashboard.component.css']
+  selector: 'volunteer-dashboard',
+  templateUrl: './volunteer-dashboard.component.html',
+  styleUrls: ['./volunteer-dashboard.component.css']
 })
-export class OrganizationDashboardComponent implements OnInit {
+export class VolunteerDashboardComponent implements OnInit {
   details: any[];
   filteredResults: any[];
   constructor(private service: JoinEventService) { }
@@ -14,7 +15,7 @@ export class OrganizationDashboardComponent implements OnInit {
 
   ngOnInit() {
     this.service.getDetails().subscribe(response => {
-      this.details = response.filter(p => p.userId === 3);  //  instead of userId of 2, pass in dynamic variable which will be userId of logged in user.  
+      this.details = response.filter(p => p.userId === 2);  //  instead of userId of 2, pass in dynamic variable which will be userId of logged in user.  
     });
   }
 
@@ -23,4 +24,7 @@ export class OrganizationDashboardComponent implements OnInit {
   }
 
 
+
+
 }
+
