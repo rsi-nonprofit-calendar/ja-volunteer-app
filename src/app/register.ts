@@ -5,4 +5,5 @@ export class Register {
   Email: string;
   Password: string;
   UserAboutMe: string;
+  UserEntity: boolean;
 }

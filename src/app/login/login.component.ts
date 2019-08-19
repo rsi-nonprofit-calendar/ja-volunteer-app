@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { LoginService } from "../login.service";
 import { FormsModule } from "@angular/forms";
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: "app-login",
@@ -12,20 +13,27 @@ import { FormsModule } from "@angular/forms";
 export class LoginComponent {
   cookieValue = 'UNKNOWN';
   model: any = {};
-
+  userType: any[];
   errorMessage: string;
   constructor(private router: Router, private LoginService: LoginService, private cookie: CookieService) { }
 
   ngOnInit() {
     sessionStorage.removeItem("UserName");
     sessionStorage.clear();
+
     // Once response returned from backend, save that info in a cookie:
     this.cookie.set("userId", "1");
     this.cookieValue = this.cookie.get('userId');
 
 
+
   }
   login() {
+
+
+    // Once response returned from backend, save that info in a cookie:
+    this.cookie.set("userId", "1");
+    this.cookie.set("userType", "Org")
 
 
     this.LoginService.Login(this.model).subscribe(response => {
