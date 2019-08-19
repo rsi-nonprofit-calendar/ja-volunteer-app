@@ -1,3 +1,4 @@
+import { CookieService } from 'ngx-cookie-service';
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { LoginService } from "../login.service";
@@ -13,7 +14,7 @@ export class LoginComponent {
   model: any = {};
 
   errorMessage: string;
-  constructor(private router: Router, private LoginService: LoginService) { }
+  constructor(private router: Router, private LoginService: LoginService, private cookie: CookieService) { }
 
   ngOnInit() {
     sessionStorage.removeItem("UserName");
