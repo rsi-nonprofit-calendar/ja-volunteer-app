@@ -1,8 +1,9 @@
+
 import {
   Component,
   ChangeDetectionStrategy,
   ViewChild,
-  TemplateRef
+  TemplateRef,
 } from "@angular/core";
 import {
   startOfDay,
@@ -24,6 +25,10 @@ import {
   CalendarView
 } from "angular-calendar";
 import { CustomEventTitleFormatter } from "./custom-event-title-formatter.provider";
+import { HttpClient } from '@angular/common/http';
+// import { CalendarService } from './../calendar.service';
+import { JoinEventService } from './../join-event/join-event.service';
+
 
 const colors: any = {
   red: {
@@ -62,12 +67,15 @@ const colors: any = {
 })
 export class CalendarComponent {
   @ViewChild("modalContent", { static: true }) modalContent: TemplateRef<any>;
+  private url = "http://jsonplaceholder.typicode.com/posts";
 
   view: CalendarView = CalendarView.Month;
 
   CalendarView = CalendarView;
 
   viewDate: Date = new Date();
+
+
 
   modalData: {
     action: string;
@@ -87,13 +95,64 @@ export class CalendarComponent {
         this.events = this.events.filter(iEvent => iEvent !== event);
         this.handleEvent("Deleted", event);
       }
+    },
+    {
+      label: '<i class="fa fa-fw fa-times"></i>',
+      onClick: ({ event }: { event: CalendarEvent }): void => {
+        this.handleEvent("Edited", event);
+      }
     }
   ];
 
   refresh: Subject<any> = new Subject();
 
+  onSubmit(f) {
+    let post = { event: f };
+    this.http.post<any[]>(this.url, post).subscribe(response => {
+      this.events.push();
+    });
+  };
+
+
+
   events: CalendarEvent[] = [
+
+
     //Example Events
+    {
+      start: subDays(startOfDay(new Date()), 1),
+      end: addDays(new Date(), 1),
+      title: "Booyah",
+      color: colors.blue,
+      actions: this.actions,
+      allDay: false,
+    },
+    {
+      start: subDays(startOfDay(new Date()), 1),
+      end: addDays(new Date(), 1),
+      title: "A 3 day event",
+      color: colors.red,
+      actions: this.actions,
+      allDay: true,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true
+      },
+      draggable: true
+    },
+    {
+      start: startOfDay(new Date()),
+      title: "An event with no end date",
+      color: colors.yellow,
+      actions: this.actions
+    },
+    {
+      start: subDays(endOfMonth(new Date()), 3),
+      end: addDays(endOfMonth(new Date()), 3),
+      title: "A long event that spans 2 months",
+      color: colors.blue,
+      allDay: true
+    },
     {
       title: "Watermelon Mountain Ranch Adoptathon",
       start: new Date(),
@@ -110,7 +169,13 @@ export class CalendarComponent {
 
   activeDayIsOpen: boolean = false;
 
-  constructor(private modal: NgbModal) {}
+  constructor(private modal: NgbModal, private http: HttpClient, private service: JoinEventService) { }
+
+  getEvents() {
+    this.service.getDetails().subscribe(response => {
+      this.events = response;
+    });
+  }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
@@ -177,4 +242,12 @@ export class CalendarComponent {
   closeOpenMonthViewDay() {
     this.activeDayIsOpen = false;
   }
+
+  // onSubmit(f) {
+  //   let CalendarEvent = { CalendarEvent: f };
+  //   this.http.post(this.url, CalendarEvent).subscribe(response => {
+  //     this.events.push(response);
+  //     this.eventForm.resetForm();
+  //   });
+  // };
 }
