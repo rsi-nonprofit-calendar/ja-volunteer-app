@@ -1,3 +1,28 @@
-.jumbotron {
-  background-color: #de795b;
+.user {
+  display: flex;
+  clear: both;
+}
+
+div {
+  margin-right: 2em;
+}
+
+.blurb {
+  margin-top: 1em;
+}
+
+.fun {
+  margin-top: 2em;
+}
+
+.history {
+  font-weight: bold;
+  margin: 3em 0 2em 0;
+  text-align: center;
+}
+
+.achievements {
+  justify-content: space-between;
+  display: flex;
+  clear: both;
 }
