@@ -1,0 +1,38 @@
+<h1>Create Your Volunteer Profile</h1>
+
+<button class="btn btn-primary">Upload your picture</button>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div>
+        <label for="VolunteerName">Your Name (publicly viewable):</label>
+        <input #event required minlength="3" maxlength="140" ngModel name="name" #name="ngModel" id="name" type="text"
+            class="form-control" />
+        <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+            <div *ngIf="name.errors.required">Name is required.</div>
+        </div>
+    </div>
+
+    <div>
+        <label for="aboutMe">About Me:</label>
+        <textarea ngModel maxlength="50" #about="ngModel" name="about" id="about" cols="30" rows="10"
+            class="form-control"></textarea>
+        <div class="alert alert-danger" *ngIf="about.touched && !about.valid">
+            <div *ngIf="about.errors.maxlength">
+                Sorry to spoil the fun, but your fun fact cannot be longer than
+                {{ about.errors.maxlength.requiredLength }} characters.
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label for="fun">Fun Fact:</label>
+        <input #event maxlength="140" ngModel name="fun" #fun="ngModel" id="fun" type="text" class="form-control" />
+        <div class="alert alert-danger" *ngIf="fun.touched && !fun.valid">
+            <div *ngIf="title.errors.maxlength">
+                Sorry to spoil the fun, but your fun fact cannot be longer than
+                {{ fun.errors.maxlength.requiredLength }} characters.
+            </div>
+        </div>
+    </div>
+
+</form>
