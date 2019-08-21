@@ -1,3 +1,4 @@
+import { CreateVolunteerProfileComponent } from './create-volunteer-profile/create-volunteer-profile.component';
 import { CreateEventComponent } from "./create-event/create-event.component";
 import { JoinEventComponent } from "./join-event/join-event.component";
 import { NgModule } from "@angular/core";
@@ -35,7 +36,8 @@ const routes: Routes = [
     component: WatermelonMountainRanchComponent
   },
   { path: "organization-dashboard", component: OrganizationDashboardComponent },
-  { path: "volunteer-dashboard", component: VolunteerDashboardComponent }
+  { path: "volunteer-dashboard", component: VolunteerDashboardComponent },
+  { path: "create-volunteer-profile", component: CreateVolunteerProfileComponent }
 ];
 
 @NgModule({

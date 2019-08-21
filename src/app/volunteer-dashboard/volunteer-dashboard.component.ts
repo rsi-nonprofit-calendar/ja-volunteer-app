@@ -1,5 +1,4 @@
 import { JoinEventService } from './../join-event/join-event.service';
-import { JoinEventComponent } from './../join-event/join-event.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
