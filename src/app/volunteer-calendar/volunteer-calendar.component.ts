@@ -24,7 +24,7 @@ import {
   CalendarEventTitleFormatter,
   CalendarView
 } from "angular-calendar";
-import { CustomEventTitleFormatter } from "./custom-event-title-formatter.provider";
+import { CustomEventTitleFormatter } from "../calendar/custom-event-title-formatter.provider";
 import { HttpClient } from '@angular/common/http';
 import { JoinEventService } from './../join-event/join-event.service';
 
@@ -53,10 +53,10 @@ const colors: any = {
 };
 
 @Component({
-  selector: "app-calendar",
+  selector: "volunteer-calendar",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ["calendar.component.css"],
-  templateUrl: "calendar.component.html",
+  styleUrls: ["../calendar/calendar.component.css"],
+  templateUrl: "/volunteer-calendar.component.html",
   providers: [
     {
       provide: CalendarEventTitleFormatter,
@@ -64,7 +64,7 @@ const colors: any = {
     }
   ]
 })
-export class CalendarComponent {
+export class VolunteerCalendarComponent {
   @ViewChild("modalContent", { static: true }) modalContent: TemplateRef<any>;
   private url = "http://jsonplaceholder.typicode.com/posts";
 
@@ -121,7 +121,7 @@ export class CalendarComponent {
     {
       start: subDays(startOfDay(new Date()), 1),
       end: addDays(new Date(), 1),
-      title: "Booyah",
+      title: "Fooyah",
       color: colors.blue,
       actions: this.actions,
       allDay: false,
@@ -241,5 +241,6 @@ export class CalendarComponent {
   closeOpenMonthViewDay() {
     this.activeDayIsOpen = false;
   }
+
 
 }

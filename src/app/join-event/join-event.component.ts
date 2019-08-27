@@ -11,18 +11,27 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./join-event.component.css"]
 })
 export class JoinEventComponent {
-
+  private url = "http://jsonplaceholder.typicode.com/posts";
   details: any[];
-  constructor(private service: JoinEventService) { }
-
+  posts: any[];
+  clicked = false;
+  constructor(private service: JoinEventService, private http: HttpClient) { }
 
   ngOnInit() {
-
+    this.posts = [];
     this.service.getDetails().subscribe(response => {
       this.details = response;
-
     });
-  }
+
+  };
+
+  onSubmit(f) {
+    let post = { event: f };
+    this.http.post(this.url, post).subscribe(response => {
+      this.posts.push(response);
+    });
+  };
 
 
 }
+

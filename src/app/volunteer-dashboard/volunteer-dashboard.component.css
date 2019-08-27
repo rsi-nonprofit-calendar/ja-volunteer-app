@@ -3,3 +3,13 @@
     margin-right: 4em;
     text-align: right;
 }
+
+h2 {
+    margin-top: 2em;
+}
+
+
+.button {
+    display: flex;
+    float: right;
+}

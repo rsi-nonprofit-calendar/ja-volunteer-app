@@ -41,7 +41,8 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { OrganizationDashboardComponent } from "./organization-dashboard/organization-dashboard.component";
 import { VolunteerDashboardComponent } from './volunteer-dashboard/volunteer-dashboard.component';
-import { CreateVolunteerProfileComponent } from './create-volunteer-profile/create-volunteer-profile.component'
+import { CreateVolunteerProfileComponent } from './create-volunteer-profile/create-volunteer-profile.component';
+import { VolunteerCalendarComponent } from './volunteer-calendar/volunteer-calendar.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { CreateVolunteerProfileComponent } from './create-volunteer-profile/crea
     RegisterComponent,
     OrganizationDashboardComponent,
     VolunteerDashboardComponent,
-    CreateVolunteerProfileComponent
+    CreateVolunteerProfileComponent,
+    VolunteerCalendarComponent
   ],
   imports: [
     NgbModule,

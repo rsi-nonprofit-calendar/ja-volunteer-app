@@ -1,3 +1,4 @@
+import { VolunteerCalendarComponent } from './volunteer-calendar/volunteer-calendar.component';
 import { CreateVolunteerProfileComponent } from './create-volunteer-profile/create-volunteer-profile.component';
 import { CreateEventComponent } from "./create-event/create-event.component";
 import { JoinEventComponent } from "./join-event/join-event.component";
@@ -23,7 +24,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "categories", component: CategoriesComponent },
-  { path: "calendar", component: CalendarComponent },
+  { path: "calendar", component: VolunteerCalendarComponent },
   { path: "join-event", component: JoinEventComponent },
   { path: "profile", component: ProfileComponent },
   { path: "aboutUs", component: AboutUsComponent },
@@ -37,7 +38,7 @@ const routes: Routes = [
   },
   { path: "organization-dashboard", component: OrganizationDashboardComponent },
   { path: "volunteer-dashboard", component: VolunteerDashboardComponent },
-  { path: "create-volunteer-profile", component: CreateVolunteerProfileComponent }
+  { path: "create-volunteer-profile", component: CreateVolunteerProfileComponent },
 ];
 
 @NgModule({
