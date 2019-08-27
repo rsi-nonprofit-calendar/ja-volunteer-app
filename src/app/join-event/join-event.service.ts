@@ -16,5 +16,8 @@ export class JoinEventService {
   }
 
 
+  unJoin() {
+    this.http.delete(this.url);
+  }
 
 }

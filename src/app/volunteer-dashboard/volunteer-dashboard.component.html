@@ -1,6 +1,6 @@
 <div class="profileButton"><button btn class="btn btn-primary" routerLink="/profile">My Profile</button></div>
 
-<app-calendar></app-calendar>
+<volunteer-calendar></volunteer-calendar>
 
 <h2>Events I've Joined</h2>
 <ul class="list-group">
@@ -8,5 +8,6 @@
         {{ detail.userId }}
         {{ detail.id }}
         {{ detail.title }}
+        <div class="button"><button onclick="unJoin">Unjoin Event</button></div>
     </li>
 </ul>

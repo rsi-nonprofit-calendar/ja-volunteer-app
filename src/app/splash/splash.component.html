@@ -6,19 +6,13 @@
   <!--JUMBOTRON-->
   <div class="container-fluid">
     <div class="jumbotron jumbotron-fluid rounded p-3 d-none d-md-block">
-      <ngb-carousel
-        [showNavigationArrows]="showNavigationArrows"
-        [showNavigationIndicators]="showNavigationIndicators"
-      >
+      <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
         <ng-template ngbSlide>
-          <div class="row justify-content-center">
+          <div class="row justify-content-center" onmouseover="" style="cursor:pointer">
             <div class="col-8">
-              <a href="calendar" alt="Events Calendar" title="Events Calendar"
-                ><img
-                  src="assets/volunteer-banner.svg"
-                  alt="Welcome To The Volunteer Calendar"
-                  class="rounded img-fluid text-centered mx-auto"
-              /></a>
+              <img src="assets/volunteer-banner.svg" alt="Welcome To The Volunteer Calendar"
+                class="rounded img-fluid text-centered mx-auto" routerLink="calendar" alt="Events Calendar"
+                title="Events Calendar" />
             </div>
             <div class="col px-3 mx-auto d-none d-xl-block">
               <h3 class="font-weight-bold text-light">
@@ -32,19 +26,11 @@
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="row justify-content-center">
+          <div class="row justify-content-center" onmouseover="" style="cursor:pointer">
             <div class="col-8">
-              <a
-                href="watermelon-mountain-ranch"
-                alt="Watermelon Mountain Ranch"
-                title="Watermelon Mountain Ranch"
-              >
-                <img
-                  src="assets/puppyadoption.svg"
-                  alt="Watermelon Mountain Ranch"
-                  class="rounded img-fluid mx-auto"
-                />
-              </a>
+              <img src="assets/puppyadoption.svg" alt="Watermelon Mountain Ranch" class="rounded img-fluid mx-auto"
+                routerLink="watermelon-mountain-ranch" alt="Watermelon Mountain Ranch"
+                title="Watermelon Mountain Ranch" />
             </div>
             <div class="col px-3 mx-auto d-none d-xl-block">
               <h3 class="font-weight-bold text-light">
@@ -60,11 +46,8 @@
         <ng-template ngbSlide>
           <div class="row justify-content-center">
             <div class="col-8">
-              <img
-                src="assets/habitat-for-humanity-banner.svg"
-                alt="Habitat For Humanity"
-                class="col rounded img-fluid mx-auto"
-              />
+              <img src="assets/habitat-for-humanity-banner.svg" alt="Habitat For Humanity"
+                class="rounded img-fluid mx-auto" />
             </div>
             <div class="col px-3 mx-auto d-none d-xl-block">
               <h3 class="font-weight-bold text-light">
@@ -86,25 +69,18 @@
 <div class="container-fluid">
   <div class="row text-center">
     <div class="col-lg-6 col-md-7 p-3 mx-auto">
-      <a href="categories">
-        <div
-          class="btn btn-info m-2 font-weight-bold"
-          id="volunteer-by-buttons"
-        >
-          Volunteer By Category
-        </div>
-      </a>
+
+      <div class="btn btn-info m-2 font-weight-bold" id="volunteer-by-buttons" routerLink="join-event">
+        Volunteer By Category
+      </div>
+
     </div>
 
     <div class="col-lg-6 col-md-7 p-3 mx-auto">
-      <a href="calendar">
-        <div
-          class="btn btn-info m-2 font-weight-bold"
-          id="volunteer-by-buttons"
-        >
-          Volunteer By Date
-        </div>
-      </a>
+      <div class="btn btn-info m-2 font-weight-bold" id="volunteer-by-buttons" routerLink="calendar">
+        Volunteer By Date
+      </div>
+
     </div>
   </div>
 </div>
@@ -113,21 +89,18 @@
 <div class="container-fluid">
   <div class="row text-center">
     <div class="col-lg-4 col-md-7 p-3 mx-auto">
-      <a href="faq" alt="FAQs" title="FAQs">
-        <div class="fa-7x fas fa-question-circle" id="faq-icon"></div>
-      </a>
+      <div class="fa-7x fas fa-question-circle" id="faq-icon" routerLink="faq" alt="FAQs" title="FAQs" onmouseover=""
+        style="cursor:pointer">
+      </div>
     </div>
 
     <div class="col-lg-4 col-md-7 p-3 mx-auto">
-      <a href="gallery" alt="Gallery" title="Gallery">
-        <div class="fa-7x fas fa-images" id="gallery-icon"></div>
-      </a>
+      <div class="fa-7x fas fa-images" id="gallery-icon" routerLink="gallery" alt="Gallery" title="Gallery"
+        onmouseover="" style="cursor:pointer"></div>
     </div>
 
     <div class="col-lg-4 col-md-7 p-3 mx-auto">
-      <a href="donate" alt="Donate" title="Donate">
-        <div class="fa-7x fas fa-hand-holding-usd" id="donate-icon"></div>
-      </a>
+      <div class="fa-7x fas fa-hand-holding-usd" id="donate-icon" routerLink="donate" alt="Donate" title="Donate"
+        onmouseover="" style="cursor:pointer"></div>
     </div>
   </div>
-</div>
